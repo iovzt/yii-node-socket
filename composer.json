@@ -1,11 +1,11 @@
 {
-    "name": "oncesk/yii-node-socket",
-    "description": "Реализует связь между php и client javascript по средству сокет соединения.",
+    "name": "iovzt/yii2-node-socket",
+    "description": "This is a fork of oncesk/yii-node-socket",
     "minimum-stability": "stable",
     "authors": [
         {
-            "name": "Alexey Panasik",
-            "email": "unnfly@gmail.com"
+            "name": "Iskryzhytskyi Oleksandr",
+            "email": "oleksandr.iskryzhytskyi@gmail.com"
         }
     ],
     "require": {

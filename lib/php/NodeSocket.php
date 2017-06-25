@@ -163,7 +163,7 @@ class NodeSocket extends Component {
         }
         
         $assets = NodeSocketAssets::register(\Yii::$app->getView());
-        $this->_assetUrl = $assets->publish('@nodeWeb');
+        $this->_assetUrl = $assets->publish(\Yii::$app->getView()->getAssetManager());
         if ($this->_assetUrl) {
             return true;
         }
