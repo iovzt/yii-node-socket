@@ -32,7 +32,7 @@ class NodeSocketAssets extends AssetBundle
     public function init()
     {
         $this->js[] = sprintf(
-            "http://%s:%d%s", Yii::$app->nodeSocket->host, Yii::$app->nodeSocket->port, '/socket.io/socket.io.js'
+            Yii::$app->nodeSocket->scheme . "://%s:%d%s", Yii::$app->nodeSocket->host, Yii::$app->nodeSocket->port, '/socket.io/socket.io.js'
         );
         $this->js[] = 'client/client.js';
     }

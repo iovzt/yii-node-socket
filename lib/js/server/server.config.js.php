@@ -5,10 +5,12 @@
  */
 ?>
 module.exports = {
+    scheme : '<?php echo $nodeSocket->scheme; ?>',
     host : '<?php echo $nodeSocket->host; ?>',
     port : parseInt('<?php echo $nodeSocket->port; ?>'),
     origin : '<?php echo $nodeSocket->getOrigin(); ?>',
     allowedServers : <?php echo json_encode($nodeSocket->getAllowedServersAddresses()); ?>,
+    serverOptions: <?php echo json_encode($nodeSocket->serverOptions); ?>,
     dbOptions : <?php echo json_encode($nodeSocket->getDb()->getConnectionOptions()); ?>,
     checkClientOrigin : <?php echo (int) $nodeSocket->checkClientOrigin; ?>,
     sessionVarName : '<?php echo $nodeSocket->sessionVarName; ?>',

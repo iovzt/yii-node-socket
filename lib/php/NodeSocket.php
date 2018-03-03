@@ -9,6 +9,13 @@ require_once 'frames/IFrameFactory.php';
 require_once 'frames/FrameFactory.php';
 
 class NodeSocket extends Component {
+    
+    /**
+     * Http or https
+     * 
+     * @var string
+     */
+    public $scheme = 'http';
 
     /**
      * Node js server host to bind http and socket server
@@ -64,6 +71,13 @@ class NodeSocket extends Component {
      * @var string|array
      */
     public $allowedServerAddresses;
+    
+    /**
+     * Options for nodejs creating server
+     * 
+     * @var array
+     */
+    public $serverOptions = [];
 
     /**
      * Default is runtime/socket-transport.server.log
